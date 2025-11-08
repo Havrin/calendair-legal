@@ -1,0 +1,5 @@
+# Replace this placeholder with your official app-ads.txt entries.
+# Follow Google's full specification: https://support.google.com/admob/answer/9363764
+# Example format:
+# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+
