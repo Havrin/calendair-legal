@@ -271,7 +271,8 @@ main {
 }
 
 .is-app .lang-switcher,
-.is-app .breadcrumbs {
+.is-app .breadcrumbs,
+.is-app h1 {
   display: none !important;
 }
 
