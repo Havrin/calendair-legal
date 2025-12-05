@@ -34,23 +34,77 @@
     </div>
 
     <section>
-      <p class="lead">Placeholder text—replace with your official privacy policy.</p>
-      <p class="placeholder">
-        [Insert the official name of your company or project here] ("we", "our", "us") is committed to protecting your privacy.
-        This placeholder text outlines the types of personal data you collect, the purposes for which you use it,
-        the legal bases for processing, and how users can exercise their rights under applicable data protection laws.
-      </p>
-      <p class="placeholder">
-        Replace this section with details about data collection (e.g., account information, calendar data),
-        data usage (e.g., providing scheduling services), data sharing (e.g., service providers, legal requirements),
-        retention periods, and security measures. Include contact information for privacy inquiries and instructions
-        for requesting access, correction, or deletion of data.
-      </p>
-      <p class="placeholder">
-        If you rely on consent, describe how users can withdraw it. If you process data under GDPR or similar regulations,
-        outline user rights and provide your Data Protection Officer contact if applicable. Mention how updates to this policy
-        will be communicated and the effective date of the latest revision.
-      </p>
+      <h2>What Calendar Data We Access</h2>
+      <p>When you grant permission, the app accesses your calendar through either:</p>
+      <ul>
+        <li>Apple EventKit (iOS), or</li>
+        <li>Google Calendar API (Android &amp; Google Accounts).</li>
+      </ul>
+      <p>The app retrieves only free/busy information required to calculate suitable meeting times.</p>
+
+      <h2>What We Do Not Access</h2>
+      <p>We explicitly do not access or store:</p>
+      <ul>
+        <li>Event titles</li>
+        <li>Descriptions or notes</li>
+        <li>Attendee lists</li>
+        <li>Locations</li>
+        <li>Reminders or attachments</li>
+        <li>Any other event content</li>
+      </ul>
+
+      <h2>Purpose of Processing</h2>
+      <p>We use your free/busy data solely to:</p>
+      <ul>
+        <li>Detect when you are available; and</li>
+        <li>Generate meeting time suggestions for you and the people you invite.</li>
+      </ul>
+      <p>This is strictly limited to functionality within the app.</p>
+
+      <h2>Legal Basis</h2>
+      <p>The legal basis for processing your calendar availability is your explicit consent (Art. 6(1)(a) GDPR). You may withdraw your consent at any time by revoking calendar access in your device settings or by deleting your account.</p>
+
+      <h2>Storage of Calendar Data</h2>
+      <p>We do not store sensitive calendar content on our servers. Temporary free/busy data may be processed in-memory to generate suggestions, but it is not persisted beyond what is necessary for the feature to function.</p>
+
+      <h2>No Human Access</h2>
+      <p>No member of our team can view your calendar data at any time. All processing is automated and restricted to the minimum required for the feature.</p>
+
+      <h2>No Sharing of Calendar Data</h2>
+      <p>We do not sell, rent, or share your calendar data with third parties.</p>
+
+      <h2>Third-Party Services Used</h2>
+      <p>Our app uses the following infrastructure services:</p>
+      <ul>
+        <li>AWS DynamoDB - stores user profiles and meeting records</li>
+        <li>AWS Lambda - executes server-side logic</li>
+        <li>AWS API Gateway - provides secure API endpoints</li>
+        <li>AWS Cognito - handles authentication (OAuth + User Pool)</li>
+        <li>Groq API - used exclusively to generate meeting recommendations and does not receive your raw calendar data</li>
+        <li>Google Calendar API - used only when you explicitly connect your Google account</li>
+        <li>Google OAuth 2.0 - for authentication with Google</li>
+        <li>Firebase Core / Analytics / Crashlytics - for app analytics and crash diagnostics (no calendar data is transmitted)</li>
+      </ul>
+      <p>All third-party services comply with security best practices and data protection requirements.</p>
+
+      <h2>International Transfers</h2>
+      <p>Some services (Google, AWS, Groq) may process data outside the EU. In such cases, we rely on:</p>
+      <ul>
+        <li>Standard Contractual Clauses (SCCs)</li>
+        <li>Adequacy decisions</li>
+        <li>Other legally recognized safeguards</li>
+      </ul>
+
+      <h2>Your Rights</h2>
+      <p>You have the right to:</p>
+      <ul>
+        <li>Access your personal data</li>
+        <li>Request deletion</li>
+        <li>Withdraw consent</li>
+        <li>Object to processing</li>
+        <li>File a complaint with your local data protection authority</li>
+      </ul>
+      <p>To exercise these rights, contact us at: <em>[insert email]</em></p>
     </section>
   </main>
 
