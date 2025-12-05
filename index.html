@@ -3,185 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CalendAIr · The app that finally ends your „When are you free?“ chaos</title>
+  <title>CalendAIr · Less Plan. More Meet.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      color-scheme: light dark;
-      --bg: #f5f7fb;
-      --bg-alt: #ffffff;
-      --text: #1f2933;
-      --text-muted: #52606d;
-      --accent: #2563eb;
-      --accent-dark: #1e4ed8;
-      --border: #d9e2ec;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: "Inter", system-ui, -apple-system, Segoe UI, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    header {
-      padding: 4rem 1.5rem 2rem;
-      background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.12), transparent 55%), var(--bg-alt);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-
-    .hero {
-      display: grid;
-      gap: 2rem;
-      align-items: center;
-    }
-
-    h1 {
-      margin: 0.5rem 0 1rem;
-      font-size: clamp(2.3rem, 4vw, 3rem);
-      line-height: 1.15;
-      font-weight: 700;
-    }
-
-    p.lead {
-      margin: 0;
-      font-size: 1.05rem;
-      color: var(--text-muted);
-      max-width: 48ch;
-    }
-
-    .store-badges {
-      margin-top: 2.5rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .store-badge {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 1rem;
-      line-height: 0;
-      transition: transform 0.2s ease, filter 0.2s ease, opacity 0.2s ease;
-    }
-
-    .store-badge img {
-      display: block;
-      height: 56px;
-      width: auto;
-    }
-
-    .store-badge:not(.is-disabled):hover {
-      transform: translateY(-2px);
-    }
-
-    .store-badge.is-disabled {
-      pointer-events: none;
-      filter: grayscale(0.25);
-      opacity: 0.95;
-    }
-
-    .store-note {
-      margin-top: 0.75rem;
-      color: var(--text-muted);
-      font-size: 0.92rem;
-    }
-
-    .card {
-      margin: 4rem auto 0;
-      background: var(--bg-alt);
-      border-radius: 1.25rem;
-      border: 1px solid var(--border);
-      padding: 2.5rem;
-      display: grid;
-      gap: 2rem;
-    }
-
-    .card h2 {
-      margin: 0;
-      font-size: 1.45rem;
-    }
-
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.75rem;
-    }
-
-    .feature {
-      padding: 1.5rem;
-      border-radius: 1rem;
-      background: rgba(37, 99, 235, 0.06);
-      border: 1px solid rgba(37, 99, 235, 0.12);
-    }
-
-    .feature h3 {
-      margin: 0 0 0.5rem;
-      font-size: 1.05rem;
-    }
-
-    .legal {
-      margin-top: 3rem;
-      border-top: 1px solid var(--border);
-      padding-top: 2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
-    .legal a {
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .legal a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      text-align: center;
-      padding: 3rem 1.5rem;
-      color: var(--text-muted);
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 640px) {
-      header {
-        padding-top: 3rem;
-      }
-
-      .card {
-        padding: 2rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@6.6.6/css/flag-icons.min.css">
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="shortcut icon" href="/assets/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="CalendAIr Web" />
+  <link rel="manifest" href="/assets/site.webmanifest" />
 </head>
 <body>
   <header>
     <div class="container hero">
-      <h1>Welcome to CalendAIr</h1>
-      <h2>The app that finally ends your „When are you free?“ chaos. We sync your calendars, find the perfect time and help you actually meet your friends.</h2>
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem;">
+        <div>
+          <h1>Welcome to CalendAIr</h1>
+          <h2>The app that finally ends your „When are you free?“ chaos. We sync your calendars, find the perfect time and help you actually meet your friends.</h2>
+        </div>
+        <nav class="lang-switcher" aria-label="Language switcher">
+          <a class="is-active" href="/"><span class="fi fi-gb"></span>EN</a>
+          <a href="/de/"><span class="fi fi-de"></span>DE</a>
+        </nav>
+      </div>
       <div class="store-badges">
         <a class="store-badge is-disabled" href="#" aria-disabled="true" tabindex="-1">
-          <img src="assets/apple-store.svg" alt="Download on the App Store (coming soon)">
+          <img src="/assets/apple-store.svg" alt="Download on the App Store (coming soon)">
         </a>
         <a class="store-badge is-disabled" href="#" aria-disabled="true" tabindex="-1">
-          <img src="assets/play-store.png" alt="Get it on Google Play (coming soon)">
+          <img src="/assets/play-store.png" alt="Get it on Google Play (coming soon)">
         </a>
       </div>
     </div>
@@ -192,17 +45,17 @@
       <div>
         <h2 id="features-heading">A smarter companion for your calendar</h2>
         <p class="lead" style="max-width: 60ch; margin-top: 1rem;">
-          Placeholder
+          Intelligent scheduling, clear availability, and effortless meetups—CalendAIr takes care of the coordination so you can focus on your friends.
         </p>
       </div>
       <div class="features">
         <article class="feature">
           <h3>AI Scheduling</h3>
-          <p>Placeholder</p>
+          <p>We surface the best times to meet based on the calendars you connect.</p>
         </article>
         <article class="feature">
-          <h3>Other headline</h3>
-          <p>Placeholder</p>
+          <h3>Smart Reminders</h3>
+          <p>Stop chasing replies. We nudge the right people at the right time.</p>
         </article>
         <article class="feature">
           <h3>Privacy First</h3>
@@ -211,21 +64,41 @@
       </div>
     </section>
 
+    <section class="card" aria-labelledby="faq-heading">
+      <div>
+        <h2 id="faq-heading">FAQ</h2>
+        <p class="lead" style="max-width: 60ch; margin-top: 1rem;">Three quick answers to get you started.</p>
+      </div>
+      <div class="faq">
+        <details id="getting-started">
+          <summary>How do I get started?</summary>
+          <div class="faq-answer">Download the app, connect your calendars, and create your first availability window.</div>
+        </details>
+        <details id="privacy">
+          <summary>How does CalendAIr handle my data?</summary>
+          <div class="faq-answer">We only use your calendar data to suggest times and never sell your information. See the Privacy Policy for details.</div>
+        </details>
+        <details id="platforms">
+          <summary>Which platforms are supported?</summary>
+          <div class="faq-answer">iOS and Android are planned; web access will arrive later this year.</div>
+        </details>
+      </div>
+    </section>
+
     <section class="legal" aria-label="Legal">
       <strong>Legal &amp; Compliance</strong>
-      <a href="privacy-policy.html">Privacy Policy</a>
-      <a href="terms-and-services.html">Terms of Service</a>
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <a href="/terms-and-services.html">Terms of Service</a>
+      <a href="/imprint.html">Imprint</a>
+      <a href="/faq.html">FAQ</a>
     </section>
   </main>
 
   <footer>
-    © <span id="current-year"></span> CalendAIr. All rights reserved.
+    © <span data-current-year></span> CalendAIr. All rights reserved.
   </footer>
 
-  <script>
-    const year = new Date().getFullYear();
-    document.getElementById("current-year").textContent = year;
-  </script>
+  <script src="/assets/site.js"></script>
 </body>
 </html>
 
